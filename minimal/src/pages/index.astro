@@ -1,26 +1,8 @@
 ---
-import Header from '../components/Header.astro';
-import "../styles/global.css";
-import Footer from '../components/Footer.astro';
-
-const pageTitle = 'My Astro Site';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "My Blog Home Page";
 ---
-
-<html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<link rel="icon" type="image/svg+xml" href="favicon.svg" />
-	<meta name="viewport" content="width=device-width" />
-	<meta name="generator" content={Astro.generator} />
-	<title>Astro</title>
-</head>
-<body>
-	<Header />
-
-	<h1>{pageTitle}</h1>
-	<Footer />
-	<script>
-    import "../scripts/menu.js";
-  </script>
-</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <h2>Welcome To the Best Blog This Side of the Rockies</h2>
+  <h3>Which Side is Up To YOUR Interpretation</h3>
+</BaseLayout>
